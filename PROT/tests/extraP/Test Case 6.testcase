@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="0">
+<testCase id="1">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
@@ -42,6 +42,38 @@
         </argument>
         <argument id="webBrowser"/>
       </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.DoWhile" name="DoWhile" testItemId="2" title="While: {UniqueId(1, NUMERIC) &gt; 5}">
+      <arguments>
+        <argument id="condition">
+          <value class="gt">
+            <lhs class="funcCall" id="UniqueId">
+              <argument id="length">
+                <value class="value" valueClass="decimal">1</value>
+              </argument>
+              <argument id="format">
+                <value class="variable">
+                  <path element="NUMERIC"/>
+                </value>
+              </argument>
+            </lhs>
+            <rhs class="value" valueClass="decimal">5</rhs>
+          </value>
+        </argument>
+        <argument id="counterName">
+          <value class="value" valueClass="string">LoopCounter</value>
+        </argument>
+        <argument id="counterStart">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="counterEnd">
+          <value class="value" valueClass="decimal">3</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="3"/>
+      </clauses>
     </apiCall>
   </steps>
 </testCase>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop">
+<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedWebBrowserType="Chrome_Headless">
   <title>/PROT/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -8,6 +8,37 @@
   <sourcePath>src</sourcePath>
   <secureStoragePath>.secrets</secureStoragePath>
   <browserDebugPort>0</browserDebugPort>
+  <environments>
+    <environment name="lightning">
+      <summary/>
+    </environment>
+  </environments>
+  <variables>
+    <testVariable name="lightning">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9</valueConstraint>
+          <valueConstraint name="regex"/>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="boolean">true</value>
+        </testVariableValue>
+        <testVariableValue envName="lightning">
+          <valueType class="textType">
+            <constraints>
+              <valueConstraint name="minLength">0</valueConstraint>
+              <valueConstraint name="maxLength">9</valueConstraint>
+              <valueConstraint name="regex"/>
+            </constraints>
+          </valueType>
+        </testVariableValue>
+      </values>
+    </testVariable>
+  </variables>
   <connectionClasses>
     <connectionClass name="sf">
       <connections>
@@ -38,6 +69,11 @@
             <connectionUrl secureStorageNodeId="f6835cd3-1500-42b6-9420-a479c4806460" url="se:baseUrl=https://www.w3schools.com/html/html_tables.asp"/>
           </connectionUrls>
         </connection>
+        <connection name="trulymadly">
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="0f5df988-691b-4ad9-84ce-7ad642c32a47" url="se:baseUrl=http://trulymadly.com/"/>
+          </connectionUrls>
+        </connection>
       </connections>
     </connectionClass>
     <connectionClass name="webservice">
@@ -56,6 +92,16 @@
             <connectionUrl url="soapservice:wsdlLocation=D:\\test\\PROT\\wsdl\\wsdl.xml;authenticationType=NO_AUTHENTICATION">
               <customHeaders/>
             </connectionUrl>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection id="ac74ea72-3eaa-40f2-b722-9c715784ad99" name="gmail">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="f2f8670f-0d64-4521-a2b0-b727efc84e3f" url="google:user=ravindrachavan4117@gmail.com;password={password};authenticationType=PASSWORD"/>
           </connectionUrls>
         </connection>
       </connections>

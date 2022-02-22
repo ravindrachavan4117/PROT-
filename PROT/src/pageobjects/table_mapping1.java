@@ -29,6 +29,10 @@ public class table_mapping1 {
 		@TextType()
 		@FindBy(xpath = "(//tr[4]/td[2])[1]")
 		public WebElement column4_2;
+		@TextType()
+		@FindBy(xpath = "//td[1]")
+		public List<WebElement> column11;
+		
 		
 	}
 

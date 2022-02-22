@@ -19,9 +19,9 @@ public class MyPageObject1 {
     public MyPageObject1(WebDriver driver){
     this.driver=driver;
     }
-    public  void alertHandle(){
+    public  void alertHandle(String b){
     Alert A=driver.switchTo().alert();
-    A.sendKeys("Name");
+    A.sendKeys(b);
     A.accept();
     }
 

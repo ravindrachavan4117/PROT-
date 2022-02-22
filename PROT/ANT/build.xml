@@ -35,7 +35,7 @@
 				invokeTestRunMonitor="true"
 				>
 		
-			<fileset id="testcases" dir="../tests"></fileset>
+			<fileset dir="../tests/Lightning Console -Smoke Testing"><include name="TC_Edit Account(269).testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="ravindra.chavan4117@gmail.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="true" includeBasicLogs="false" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="true" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
